@@ -5,7 +5,7 @@ from sys import platform
 
 
 class TestConfig(unittest.TestCase):
-    @unittest.skipUnless(platform.startswith('linux'), 'Only for linux')
+    @unittest.skipUnless(platform.startswith('linux'), 'For linux')
     def test_windows_system_disk_err(self):
         self.assertRaises(EnvironmentError, Config.get_windows_system_disk)
 
